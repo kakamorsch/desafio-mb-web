@@ -2,13 +2,7 @@
 	<div class="container">
 		<Step1 v-if="step === 1" @next="nextStep" :form="form" />
 		<Step2Fisica
-			v-if="step === 2 && form.tipo === 'fisica'"
-			@next="nextStep"
-			@back="prevStep"
-			:form="form"
-		/>
-		<Step2Juridica
-			v-if="step === 2 && form.tipo === 'juridica'"
+			v-if="step === 2"
 			@next="nextStep"
 			@back="prevStep"
 			:form="form"
@@ -28,9 +22,6 @@ import { ref, defineAsyncComponent } from 'vue';
 const Step1 = defineAsyncComponent(() => import('./components/Step1.vue'));
 const Step2Fisica = defineAsyncComponent(() =>
 	import('./components/Step2Fisica.vue'),
-);
-const Step2Juridica = defineAsyncComponent(() =>
-	import('./components/Step2Juridica.vue'),
 );
 const Step3 = defineAsyncComponent(() => import('./components/Step3.vue'));
 const Step4 = defineAsyncComponent(() => import('./components/Step4.vue'));
