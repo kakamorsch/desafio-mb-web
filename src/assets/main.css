@@ -1,16 +1,81 @@
 /* Estilos Globais */
 body {
-    font-family: system-ui, sans-serif;
-    background-color: #f8fafc;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  font-family: Arial, sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
 
   .container {
     width: 100%;
     max-width: 1280px;
     padding: 1rem;
   }
+  .container form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .step {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 14px;
+    color: #5e5e5e;
+    margin-bottom: 10px;
+  }
+  .step h2 span {
+    color: #ff9900; /* cor retirada da imagem de exemplo */
+  }
+  .step h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.step label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+.step input{
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.step .radio-group {
+  width: 75%;
+  display: flex;
+  margin-bottom: 15px;
+}
+.radio-group label {
+  display: flex;
+}
+.step button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #ff9900; /* cor retirada da imagem de exemplo */
+  cursor: pointer;
+}
+.step .button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.step .button-group button {
+  width: 48%;
+}
+.step .button-group button.back {
+  background-color: white;
+  color: #ff9900; /* cor retirada da imagem de exemplo */
+  border: 1px solid #ff9900;
+}
