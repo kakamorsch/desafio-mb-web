@@ -5,12 +5,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const user = {}; // Cadastro do usuário
+let user = {}; // Cadastro do usuário
 
 // Rota para criar usuário
 app.post('/user', (req, res) => {
   user = req.body;
-  res.status(201).json(newUser);
+  res.status(201).json(user);
 });
 
 

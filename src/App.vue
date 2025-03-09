@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+import { handleCreateUser } from './api'
 import { ref, defineAsyncComponent } from 'vue';
 const Step1 = defineAsyncComponent(() => import('./components/Step1.vue'));
 const Step2 = defineAsyncComponent(() =>
@@ -31,6 +32,7 @@ const step = ref(1);
 const form = ref({
 	tipo: 'fisica', // Definimos o padrão como pessoa física
 	// Os demais campos serão alimentados conforme avançamos nos passos
+	// Isso não é uma boa prática...
 });
 
 // Metodos para navegação entre os passos
@@ -47,7 +49,7 @@ const prevStep = () => {
 };
 
 const submitForm = () => {
-	// TODO: adicionar lógica de envio para o backend
+	handleCreateUser(form.value)
 	console.log('Form:', form.value);
 };
 </script>
