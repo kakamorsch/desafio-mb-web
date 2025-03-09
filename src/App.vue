@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<Step1 v-if="step === 1" @next="nextStep" :form="form" />
-		<Step2Fisica
+		<Step2
 			v-if="step === 2"
 			@next="nextStep"
 			@back="prevStep"
@@ -20,8 +20,8 @@
 <script setup>
 import { ref, defineAsyncComponent } from 'vue';
 const Step1 = defineAsyncComponent(() => import('./components/Step1.vue'));
-const Step2Fisica = defineAsyncComponent(() =>
-	import('./components/Step2Fisica.vue'),
+const Step2 = defineAsyncComponent(() =>
+	import('./components/Step2.vue'),
 );
 const Step3 = defineAsyncComponent(() => import('./components/Step3.vue'));
 const Step4 = defineAsyncComponent(() => import('./components/Step4.vue'));
