@@ -1,29 +1,89 @@
-# desafio-mb-web
+**README: Como Executar o Projeto**
 
-This template should help get you started developing with Vue 3 in Vite.
+Este projeto é uma aplicação desenvolvida com Vue 3 e Vite, que inclui um servidor para gerenciar requisições. Abaixo estão as instruções para configurar e executar o projeto.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+**Pré-requisitos**
 
-## Customize configuration
+- Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+- Instale o [Bun](https://bun.sh/) como gerenciador de pacotes.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+**Configuração do Projeto**
 
-```sh
-bun install
-```
+1. **Clone o repositório:**
 
-### Compile and Hot-Reload for Development
+   ```bash
+   git clone https://github.com/kakamorsch/desafio-mb-web.git
+   cd desafio-mb-web
+   ```
 
-```sh
-bun dev
-```
+2. **Instale as dependências:**
 
-### Compile and Minify for Production
+   Execute o seguinte comando na raiz do projeto:
 
-```sh
+   ```bash
+   bun install
+   ```
+
+---
+
+**Executando o Servidor**
+
+1. **Navegue até a pasta do servidor:**
+
+   ```bash
+   cd server
+   ```
+
+2. **Instale as dependências:**
+
+   Execute o seguinte comando na raiz do projeto:
+
+   ```bash
+   bun install
+   ```
+
+3. **Inicie o servidor:**
+
+   O servidor está configurado para rodar na porta 5000. Para iniciá-lo, execute:
+
+   ```bash
+   bun run start
+   ```
+
+   O servidor agora deve estar em execução e pronto para receber requisições.
+
+---
+
+**Executando a Aplicação Frontend**
+
+1. **Volte para a raiz do projeto:**
+
+   ```bash
+   cd ..
+   ```
+
+2. **Inicie a aplicação:**
+
+   Para iniciar a aplicação em modo de desenvolvimento, execute:
+
+   ```bash
+   bun dev
+   ```
+
+   A aplicação estará disponível em `http://localhost:5173` (ou outra porta se configurada).
+
+---
+
+**Compilando para Produção**
+
+Para compilar a aplicação para produção, execute:
+
+```bash
 bun run build
 ```
+
+Os arquivos compilados serão gerados na pasta `dist`.
