@@ -48,8 +48,13 @@ const prevStep = () => {
 	}
 };
 
-const submitForm = () => {
-	handleCreateUser(form.value)
-	console.log('Form:', form.value);
+const submitForm = async () => {
+	try {
+		const response = await handleCreateUser(form.value);
+		alert('Sucesso');
+		console.log('Form:', response);
+	} catch (error) {
+		alert('Erro ao criar usuário');
+	}
 };
 </script>
